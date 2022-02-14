@@ -33,3 +33,22 @@ document.getElementById('key-pad').addEventListener('click',function(event){
    }
  
 })
+
+function veryfyPin(){
+    const pin = document.getElementById('display-pin').value
+    const typedNumber = document.getElementById('typed-numbers').value;
+    const succsessMessage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    if(pin == typedNumber){
+       
+       succsessMessage.style.display = 'block';
+       failError.style.display = 'none';
+
+    }
+
+    else {
+       
+        failError.style.display = 'block';
+        succsessMessage.style.display = 'none';
+    }
+}
